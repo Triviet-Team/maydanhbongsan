@@ -1234,6 +1234,9 @@ body .ui-widget.ui-widget-content {
 .page-detail img {
   margin-bottom: 20px;
 }
+.page-detail.service-page .similar img {
+  margin-bottom: 15px;
+}
 .page-detail .similar {
   margin-top: 50px;
 }
