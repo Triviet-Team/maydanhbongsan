@@ -178,6 +178,8 @@ $main_color: #009833;
   height: 60px;
   @include sha;
   border: 0;
+  background: $main_color;
+  color: white;
 
   .container {
     display: flex;
@@ -189,8 +191,7 @@ $main_color: #009833;
 
     .nav {
       display: block;
-      margin-top: -1px;
-      padding-bottom: 1px;  
+      margin-top: -2px;
 
       li {
         -webkit-transition: .5s;
@@ -245,7 +246,7 @@ $main_color: #009833;
         }
 
         .active {
-          color: $main_color;
+          background: #1ede5e;
         }
 
         a {
@@ -253,14 +254,14 @@ $main_color: #009833;
           font-size: 14px;
           -webkit-transition: .3s;
           transition: .3s;
-          color: black;
+          color: white;
           padding: 0;
           display: initial;
           padding: 22px 17px;
           text-transform: uppercase;
 
           &:hover {
-            color: $main_color;
+            background: #1ede5e;
           }
 
           i {
@@ -287,7 +288,7 @@ $main_color: #009833;
       transition: .3s;
 
       &:hover {
-        color: $main_color;
+        color: black;
       }
     }
   }
