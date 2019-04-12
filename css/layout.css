@@ -23,7 +23,6 @@
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -72,6 +71,7 @@ body a {
   text-decoration: none;
   font-weight: 400;
   color: inherit;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 body a:hover, body a:focus {
@@ -101,23 +101,27 @@ body .go-top {
   bottom: 15px;
   right: 15px;
   background: #009833;
+  -webkit-transition: 500ms;
   transition: 500ms;
   z-index: 1000;
   cursor: pointer;
   width: 40px;
   height: 40px;
   border-radius: 40px;
+  -webkit-transform: translateY(100px);
   transform: translateY(100px);
 }
 body .go-top:hover {
   background: #009833;
 }
 body .go-top:hover span:nth-child(1) {
+  -webkit-transform: rotate(-35deg);
   transform: rotate(-35deg);
   left: 7px;
   top: 18px;
 }
 body .go-top:hover span:nth-child(2) {
+  -webkit-transform: rotate(35deg);
   transform: rotate(35deg);
   left: 19px;
   top: 18px;
@@ -128,6 +132,7 @@ body .go-top span {
   width: 15px;
   height: 2px;
   background: white;
+  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 body .go-top span:nth-child(1) {
@@ -141,6 +146,7 @@ body button:focus {
 }
 body input:focus,
 body select:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 152, 51, 0.5);
   box-shadow: 0 0 0 0.2rem rgba(0, 152, 51, 0.5);
 }
 
@@ -191,6 +197,7 @@ body .ui-widget.ui-widget-content {
   border: 1px solid #666;
   color: #585858;
   border-radius: 3px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   width: 40px;
   height: 40px;
@@ -215,6 +222,8 @@ body .ui-widget.ui-widget-content {
   background: none;
   padding: 0;
   margin-bottom: 0;
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
   justify-content: left;
 }
 .bread-crumb .breadcrumb .breadcrumb-item:first-child::before {
@@ -302,6 +311,7 @@ body .ui-widget.ui-widget-content {
   font-weight: 500;
   background: #009833;
   color: white;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   border: 2px solid #009833;
 }
@@ -324,6 +334,7 @@ body .ui-widget.ui-widget-content {
   position: absolute;
   top: 30% !important;
   font-size: 30px !important;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   color: #666;
   border: 0 !important;
@@ -386,6 +397,7 @@ body .ui-widget.ui-widget-content {
 }
 .footer ul li a {
   color: #ccc;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   font-size: 0.9em;
 }
@@ -395,6 +407,7 @@ body .ui-widget.ui-widget-content {
 .footer i {
   font-size: 20px;
   margin-right: 15px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .footer i:hover {
@@ -432,6 +445,8 @@ body .ui-widget.ui-widget-content {
   background: #f4f4f4;
 }
 .header-top .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .header-top .logo {
@@ -446,6 +461,8 @@ body .ui-widget.ui-widget-content {
   margin: 20px 0;
 }
 .header-top .contact ul li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   margin: 0px 20px;
   max-width: calc(100% / 3 - 50px);
@@ -472,6 +489,7 @@ body .ui-widget.ui-widget-content {
 
 .search {
   text-align: right;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   margin-top: -50px;
   z-index: -1;
@@ -482,6 +500,7 @@ body .ui-widget.ui-widget-content {
 }
 .search form {
   position: relative;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .search input {
@@ -499,6 +518,15 @@ body .ui-widget.ui-widget-content {
   outline: none;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+.search input::-webkit-input-placeholder {
+  color: #585858;
+}
+.search input:-ms-input-placeholder {
+  color: #585858;
+}
+.search input::-ms-input-placeholder {
+  color: #585858;
 }
 .search input::placeholder {
   color: #585858;
@@ -524,6 +552,7 @@ body .ui-widget.ui-widget-content {
   text-align: center;
   line-height: 50px;
   cursor: pointer;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .search button:hover {
@@ -546,6 +575,8 @@ body .ui-widget.ui-widget-content {
   color: white;
 }
 .menu .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .menu .main-menu {
@@ -564,6 +595,7 @@ body .ui-widget.ui-widget-content {
   position: relative;
 }
 .menu .main-menu .nav li:hover ul {
+  -webkit-transform: none;
   transform: none;
   opacity: 1;
   visibility: initial;
@@ -582,9 +614,11 @@ body .ui-widget.ui-widget-content {
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   border: 0;
   text-align: left;
+  -webkit-transform: translateY(40px);
   transform: translateY(40px);
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .menu .main-menu .nav li ul li {
@@ -625,6 +659,7 @@ body .ui-widget.ui-widget-content {
 .menu .main-menu .nav li a i {
   font-size: 24px;
   margin-left: 5px;
+  -webkit-transform: translateY(3px);
   transform: translateY(3px);
   display: inline-block;
 }
@@ -636,6 +671,7 @@ body .ui-widget.ui-widget-content {
 .menu .search-btn i {
   font-size: 24px;
   cursor: pointer;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .menu .search-btn i:hover {
@@ -691,7 +727,10 @@ body .ui-widget.ui-widget-content {
   margin-bottom: 50px;
 }
 .category-home .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
 }
 .category-home .box-category {
@@ -724,6 +763,7 @@ body .ui-widget.ui-widget-content {
 }
 .category-home .box-category-btn a i {
   margin-left: 5px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -819,6 +859,7 @@ body .ui-widget.ui-widget-content {
   background: #e1e1e1;
   position: absolute;
   top: 50%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   left: 0;
   z-index: 1;
@@ -839,9 +880,11 @@ body .ui-widget.ui-widget-content {
   text-align: center;
 }
 .box-service:hover img {
+  -webkit-filter: brightness(0.9);
   filter: brightness(0.9);
 }
 .box-service img {
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   width: 100%;
   margin-bottom: 15px;
@@ -853,11 +896,13 @@ body .ui-widget.ui-widget-content {
 
 .box-product {
   background: white;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   position: relative;
   border: 1px solid #e1e1e1;
 }
 .box-product:hover {
+  -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.16);
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.16);
 }
 .box-product:hover .box-product-img-custom {
@@ -920,6 +965,8 @@ body .ui-widget.ui-widget-content {
   text-align: left;
 }
 .home-bottom .box-product-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 20px;
 }
@@ -931,6 +978,7 @@ body .ui-widget.ui-widget-content {
   overflow: hidden;
 }
 .home-bottom .box-product-bottom-img:hover img {
+  -webkit-transform: translate(-50%, -50%) scale(1.2);
   transform: translate(-50%, -50%) scale(1.2);
 }
 .home-bottom .box-product-bottom-img img {
@@ -938,7 +986,9 @@ body .ui-widget.ui-widget-content {
   width: 100%;
   left: 50%;
   top: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .home-bottom .box-product-bottom-detail {
@@ -978,6 +1028,15 @@ body .ui-widget.ui-widget-content {
   background: none;
   color: white;
 }
+.home-bottom .contact input::-webkit-input-placeholder {
+  color: white;
+}
+.home-bottom .contact input:-ms-input-placeholder {
+  color: white;
+}
+.home-bottom .contact input::-ms-input-placeholder {
+  color: white;
+}
 .home-bottom .contact input::placeholder {
   color: white;
 }
@@ -985,6 +1044,7 @@ body .ui-widget.ui-widget-content {
   border: 0;
   border-bottom: 1px solid #009833;
   outline: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .home-bottom .contact textarea {
@@ -994,6 +1054,15 @@ body .ui-widget.ui-widget-content {
   width: 100%;
   margin-bottom: 30px;
   background: none;
+  color: white;
+}
+.home-bottom .contact textarea::-webkit-input-placeholder {
+  color: white;
+}
+.home-bottom .contact textarea:-ms-input-placeholder {
+  color: white;
+}
+.home-bottom .contact textarea::-ms-input-placeholder {
   color: white;
 }
 .home-bottom .contact textarea::placeholder {
@@ -1016,6 +1085,7 @@ body .ui-widget.ui-widget-content {
   cursor: pointer;
   margin-bottom: 30px;
   border: 2px solid #009833;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .home-bottom .contact button:hover {
@@ -1173,6 +1243,7 @@ body .ui-widget.ui-widget-content {
   text-transform: uppercase;
   font-weight: 600;
   border: 2px solid #009833;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .product-page .main .product-detail-1-detail .quantity a:hover {
@@ -1215,7 +1286,10 @@ body .ui-widget.ui-widget-content {
   margin-bottom: 40px;
 }
 .service-page .service-zone {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0 -15px;
 }
@@ -1324,7 +1398,9 @@ body .ui-widget.ui-widget-content {
     background: white;
     position: absolute;
     width: 300px;
+    -webkit-transform: translate(-300px, 0);
     transform: translate(-300px, 0);
+    -webkit-transition: 0.3s;
     transition: 0.3s;
     height: 100vh;
     opacity: 0;
@@ -1337,6 +1413,7 @@ body .ui-widget.ui-widget-content {
     overflow-y: scroll;
   }
   .menu .main-menu .nav.out {
+    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
     opacity: 1;
   }
@@ -1366,6 +1443,7 @@ body .ui-widget.ui-widget-content {
   .menu .main-menu .nav li ul {
     width: 300px;
     top: 50px;
+    -webkit-transform: translateX(-300px);
     transform: translateX(-300px);
     padding-top: 0;
     height: auto;
@@ -1455,10 +1533,12 @@ body .ui-widget.ui-widget-content {
     top: 60px;
     z-index: 999;
     height: 50px;
+    -webkit-transform: translateY(-60px);
     transform: translateY(-60px);
     visibility: initial;
   }
   .search.active {
+    -webkit-transform: none;
     transform: none;
   }
 }
@@ -1499,6 +1579,7 @@ body .ui-widget.ui-widget-content {
     display: block;
   }
   .footer ul {
+    -webkit-transition: 0.3s;
     transition: 0.3s;
     display: none;
     margin-top: -10px;
@@ -1510,6 +1591,7 @@ body .ui-widget.ui-widget-content {
 
   .box-product:hover {
     border: 0;
+    -webkit-box-shadow: none;
     box-shadow: none;
   }
   .box-product-img {

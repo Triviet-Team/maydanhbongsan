@@ -125,7 +125,9 @@ $main_color: #009833;
         background: white;
         position: absolute;
         width: 300px;
-        transform: translate(-300px, 0);
+        -webkit-transform: translate(-300px, 0);
+                transform: translate(-300px, 0);
+        -webkit-transition: .3s;
         transition: .3s;
         height: 100vh;
         opacity: 0;
@@ -138,7 +140,8 @@ $main_color: #009833;
         overflow-y: scroll;
 
         &.out {
-          transform: translate(0, 0);
+          -webkit-transform: translate(0, 0);
+                  transform: translate(0, 0);
           opacity: 1;
         }
 
@@ -172,7 +175,8 @@ $main_color: #009833;
           ul { 
             width: 300px;
             top: 50px;
-            transform: translateX(-300px);
+            -webkit-transform: translateX(-300px);
+                    transform: translateX(-300px);
             padding-top: 0;
             height: auto;
             position: fixed;
@@ -270,11 +274,13 @@ $main_color: #009833;
     top: 60px;
     z-index: 999;
     height: 50px;
-    transform: translateY(-60px);
+    -webkit-transform: translateY(-60px);
+            transform: translateY(-60px);
     visibility: initial;
 
     &.active {
-      transform: none;
+      -webkit-transform: none;
+              transform: none;
     }
   }
 
@@ -322,6 +328,7 @@ $main_color: #009833;
     }
 
     ul {
+      -webkit-transition: .3s;
       transition: .3s;
       display: none;
       margin-top: -10px;
@@ -337,7 +344,8 @@ $main_color: #009833;
 
     &:hover {
       border: 0;
-      box-shadow: none;
+      -webkit-box-shadow: none;
+              box-shadow: none;
     }
 
     &-img {
